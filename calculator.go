@@ -63,7 +63,7 @@ func main() {
 		fmt.Println("Enter process: (add, sub, mul, div)")
 		fmt.Scanln(&process)
 		// Added + - x / for usuability
-		arithmetic := []string{"add", "sub", "mul", "div", "+", "-", "x", "X", "/"}
+		arithmetic := []string{"add", "sub", "mul", "div", "+", "-", "x", "X", "*", "/"}
 		if !contains(arithmetic, process) {
 			fmt.Println("Please enter process: (add, sub, mul, div) only")
 		} else {
@@ -83,7 +83,7 @@ func main() {
 	case "-", "sub":
 		result = subtract(a, b)
 		fmt.Println("Result: ", result)
-	case "x", "X", "mul":
+	case "x", "X", "mul", "*":
 		result = multiply(a, b)
 		fmt.Println("Result: ", result)
 	case "/", "div":
